@@ -75,7 +75,6 @@ namespace cs_console_mysql_01
             // MySQL に接続
             myCon.Open();
 
-
             return myCon;
         }
     }
