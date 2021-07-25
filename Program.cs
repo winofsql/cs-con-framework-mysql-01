@@ -14,7 +14,11 @@ namespace cs_console_mysql_01
             // MySQL の処理
 
             // SQL
-            string myQuery = "SELECT 社員マスタ.*,DATE_FORMAT(生年月日,'%Y-%m-%d') as 誕生日 from 社員マスタ";
+            string myQuery = 
+                @"SELECT
+                    社員マスタ.*,
+                    DATE_FORMAT(生年月日,'%Y-%m-%d') as 誕生日
+                    from 社員マスタ";
 
             // SQL実行用のオブジェクトを作成
             OdbcCommand myCommand = new OdbcCommand();
@@ -32,8 +36,13 @@ namespace cs_console_mysql_01
             // myReader からデータが読みだされる間ずっとループ
             while (myReader.Read())
             {
-                string text = $"{myReader.GetValue(myReader.GetOrdinal("氏名")).ToString()}";
+                // 列名より列番号を取得
+                int index = myReader.GetOrdinal("氏名");
+                // 列番号で、値を取得して文字列化
+                string text = myReader.GetValue(index).ToString();
+                // 実際のコンソールに出力
                 Console.WriteLine(text);
+                // 出力ウインドウに出力
                 Debug.WriteLine($"Debug:{text}");
             }
 
