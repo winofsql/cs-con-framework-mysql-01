@@ -63,6 +63,7 @@ namespace cs_console_mysql_01
             builder.Add("pwd", "");
 
             Console.WriteLine(builder.ConnectionString);
+            Debug.WriteLine($"Debug:{builder.ConnectionString}");
 
             // 接続の作成
             OdbcConnection myCon = new OdbcConnection();
