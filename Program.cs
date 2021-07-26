@@ -62,8 +62,6 @@ namespace cs_console_mysql_01
             builder.Add("uid", "root");
             builder.Add("pwd", "");
 
-            string work = builder.ConnectionString;
-
             Console.WriteLine(builder.ConnectionString);
 
             // 接続の作成
