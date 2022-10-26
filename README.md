@@ -1,5 +1,7 @@
 # cs-con-mysql-01
-コンソール で MySQL をループで読み出す
+- ## コンソール で MySQL をループで読み出す
+- ## OdbcConnectionStringBuilder を使用して、接続文字列を作成する
+- ## using を使わずに Open と Close を明示的に記述する
 
 ```cs
 using System;
