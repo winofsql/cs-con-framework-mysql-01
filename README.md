@@ -3,6 +3,7 @@
 - ### OdbcConnectionStringBuilder を使用して、接続文字列を作成する
 - ### using を使わずに Open と Close を明示的に記述する
 <br>
+
 ```cs
 using System;
 using System.Data.Odbc;
